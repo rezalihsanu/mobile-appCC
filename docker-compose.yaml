@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    container_name: kalkulator-app-web
+    ports:
+      - "8081:8081"
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npx expo start
